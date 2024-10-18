@@ -9,7 +9,9 @@ st.title("Подсчет количества погибших детей")
 df.drop_duplicates()
 df = df.reset_index(drop=True)
 
-if age = st.number_input("Enter age:", min_value=0, max_value=18, value=10, step=1) or st.button("Подсчитать"):
+age = st.number_input("Enter age:", min_value=0, max_value=18, value=10, step=1)
+
+if st.button("Подсчитать"):
     children_died = df[(df['Age'] <= age) & (df['Survived'] == 0)]
     result = children_died.groupby('Embarked').size().reset_index(name='Count')
 
