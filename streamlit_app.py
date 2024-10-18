@@ -4,7 +4,7 @@ import pandas as pd
 df = pd.read_csv('data/titanic_train.csv', delimiter=',')
 
 st.image('data/14047.webp')
-st.title("Подсчет количества погибших детей")
+st.title("Подсчет количества погибших детей по каждому пункту посадки")
 
 df.drop_duplicates()
 df = df.reset_index(drop=True)
@@ -18,9 +18,8 @@ if st.button("Подсчитать") or st.session_state.get('age_entered', Fals
 
     st.write(result)
 
-st.dataframe(df)
+# st.dataframe(df)
 
-# Обработка нажатия Enter
 if st.session_state.get('age_entered', False) and age_input.isdigit():
     st.session_state['age_entered'] = False
 else:
