@@ -20,7 +20,7 @@ if st.button("Подсчитать") or st.session_state.get('age_entered', Fals
 
 # st.dataframe(df)
 
-if st.session_state.get('age_entered', False) and age_input.isdigit():
+if st.session_state.get('age_entered', False):
     st.session_state['age_entered'] = False
 else:
     st.session_state['age_entered'] = True
