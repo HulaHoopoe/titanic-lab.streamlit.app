@@ -11,7 +11,8 @@ df = df.reset_index(drop=True)
 
 age_input = st.number_input("Введите возраст (0-18):", min_value=0, max_value=18, value=10, step=1)
 
-if st.button("Подсчитать") or st.session_state.get('age_entered', False):
+# if st.button("Подсчитать") or st.session_state.get('age_entered', False):
+if st.button("Подсчитать"):
     age = int(age_input)
     children_died = df[(df['Age'] <= age) & (df['Survived'] == 0)]
     result = children_died.groupby('Embarked').size().reset_index(name='Count')
@@ -20,7 +21,7 @@ if st.button("Подсчитать") or st.session_state.get('age_entered', Fals
 
 # st.dataframe(df)
 
-if st.session_state.get('age_entered', False):
-    st.session_state['age_entered'] = False
-else:
-    st.session_state['age_entered'] = True
+# if st.session_state.get('age_entered', False):
+#     st.session_state['age_entered'] = False
+# else:
+#     st.session_state['age_entered'] = True
