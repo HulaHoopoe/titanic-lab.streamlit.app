@@ -4,7 +4,7 @@ import pandas as pd
 
 df = pd.read_csv('/data/titanic_train.csv', delimiter = ',')
 
-st.write(df)
+st.dataframe(df)
 
 # import csv
 # import json
