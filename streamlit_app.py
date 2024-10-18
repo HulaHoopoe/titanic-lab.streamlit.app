@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
 
-
 df = pd.read_csv('data/titanic_train.csv', delimiter = ',')
 
+st.image('data/14047.webp')
+st.title("Подсчет количества погибших детей")
 st.dataframe(df)
 
 # import csv
