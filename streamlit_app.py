@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 
-df = pd.read_csv('/data/titanic_train.csv', delimiter = ',')
+df = pd.read_csv('data/titanic_train.csv', delimiter = ',')
 
 st.dataframe(df)
 
